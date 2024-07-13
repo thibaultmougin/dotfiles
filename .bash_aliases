@@ -1,1 +1,0 @@
-/home/tmougin/.bash_aliases
