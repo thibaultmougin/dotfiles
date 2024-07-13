@@ -51,7 +51,7 @@
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Tokyo Night Light",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#e6e7ed",
     "titleBar.inactiveBackground": "#e6e7ed",

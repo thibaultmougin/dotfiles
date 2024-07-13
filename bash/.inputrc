@@ -1,0 +1,10 @@
+set colored-stats on
+set editing-mode vi
+set keymap vi-command
+
+# Show tab-completion options on first <tab> instead of waiting
+# for multiple completions.
+set show-all-if-ambiguous on
+
+# Case insensitive tab-completion
+set completion-ignore-case on
