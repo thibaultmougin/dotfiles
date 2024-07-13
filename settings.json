@@ -1,0 +1,168 @@
+// Extensions :
+// - Vim
+// - Python
+// - Pylance
+// - Modern Fortran
+// - Tokyo Night
+// - vscode-icons
+// - vscode-pdf
+// - indent rainbow
+// - evondev - indent rainbow
+
+{
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+  "editor.cursorSurroundingLines": 10,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "300",
+  "editor.lightbulb.enabled": "off",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "on",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggestFontSize": 14,
+  "editor.wordWrap": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": false,
+  "editor.renderWhitespace": "none",
+  "editor.stickyScroll.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabFocusMode": false,
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.horizontal": "auto",
+  "editor.autoClosingComments": "always",
+  "editor.guides.indentation": true,
+  "editor.detectIndentation": true,
+  "editor.rulers": [72],
+
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.layoutControl.enabled": false,
+  "workbench.settings.editor": "json",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Tokyo Night Light",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#e6e7ed",
+    "titleBar.inactiveBackground": "#e6e7ed",
+    "editorBracketHighlight.foreground1": "#34548a",
+    "editorBracketHighlight.foreground3": "#965027",
+    "editorBracketHighlight.foreground2": "#789e51",
+    "editorBracketHighlight.foreground4": "#7d66a5",
+    "editorBracketHighlight.foreground5": "#e88a54",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+  },
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.reduceMotion": "off",
+
+  "window.commandCenter": false,
+  "window.newWindowDimensions": "maximized",
+  "window.restoreFullscreen": true,
+  "window.zoomLevel": 1,
+  "window.titleBarStyle": "custom",
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  "extensions.autoUpdate": false,
+  "extensions.ignoreRecommendations": false,
+
+  "vim.highlightedyank.color": "rgba(255,219,143,0.6)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.hlsearch": false,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    },
+    {
+      "before": ["m"],
+      "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["m"],
+      "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    }
+  ],
+
+  "zenMode.hideLineNumbers": false,
+  "zenMode.fullScreen": true,
+  "zenMode.centerLayout": false,
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.vscode": true,
+    "**/.gitignore": true,
+    "**/README.md": true
+  },
+
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.wordWrap": "on",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.experimental.showMoves": true,
+
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorStyleInactive": "underline",
+
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "breadcrumbs.enabled": false,
+  "telemetry.telemetryLevel": "off",
+
+  // TOKYO NIGHT LIGHT SETUP :
+  "indentRainbow.colors": [
+    "rgba(144, 224, 239,0.1)",
+    "rgba(72, 202, 228,0.1)",
+    "rgba(0, 180, 216,0.1)",
+    "rgba(0, 150, 199,0.1)",
+    "rgba(0, 119, 182, 0.1)",
+    "rgba(2, 62, 138,0.1)",
+    "rgba(3, 4, 94,0.1)",
+    "rgba(2, 62, 138,0.1)",
+    "rgba(0, 119, 182, 0.1)",
+    "rgba(0, 150, 199,0.1)",
+    "rgba(0, 180, 216,0.1)",
+    "rgba(72, 202, 228,0.1)",
+    "rgba(144, 224, 239,0.1)"
+  ],
+
+  "indentRainbow.errorColor": "rgba(3, 4, 94,0.1)",
+  "remote.autoForwardPortsSource": "hybrid",
+
+  "files.trimTrailingWhitespace": true
+}
