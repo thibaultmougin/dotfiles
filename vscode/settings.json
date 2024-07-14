@@ -41,6 +41,8 @@
   "editor.detectIndentation": true,
   "editor.rulers": [72],
   "editor.letterSpacing": 0.0,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "'SF Mono', Consolas, 'Droid Sans Mono', 'Courier New', monospace",
 
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
@@ -165,6 +167,5 @@
   "remote.autoForwardPortsSource": "hybrid",
 
   "files.trimTrailingWhitespace": true,
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "editor.fontFamily": "'SF Mono', Consolas, 'Droid Sans Mono', 'Courier New', monospace"
+  "terminal.integrated.defaultProfile.linux": "bash"
 }
