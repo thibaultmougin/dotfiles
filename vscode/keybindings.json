@@ -304,5 +304,25 @@
   {
     "key": "ctrl+f4",
     "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "shift+pagedown",
+    "command": "-workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "shift+pageup",
+    "command": "-workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
   }
 ]
