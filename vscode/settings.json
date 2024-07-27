@@ -84,6 +84,7 @@
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": false,
   "vim.useSystemClipboard": true,
+  "vim.leader": "space",
   "vim.normalModeKeyBindings": [
     {
       "before": ["j"],
@@ -104,12 +105,26 @@
     {
       "before": ["m"],
       "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    },
+    {
+      "before": ["leader", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["workbench.action.showCommands"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["m"],
       "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["ctrl+v"],
+      "commands": ["editor.action.clipboardPasteAction"]
     }
   ],
 
@@ -167,5 +182,6 @@
   "remote.autoForwardPortsSource": "hybrid",
 
   "files.trimTrailingWhitespace": true,
-  "terminal.integrated.defaultProfile.linux": "bash"
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "window.menuBarVisibility": "compact"
 }
