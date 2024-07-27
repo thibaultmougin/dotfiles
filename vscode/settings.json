@@ -16,7 +16,7 @@
   "editor.cursorStyle": "line",
   "editor.cursorSurroundingLines": 10,
   "editor.fontLigatures": true,
-  "editor.fontWeight": "normal",
+  "editor.fontWeight": 400,
   "editor.lightbulb.enabled": "off",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -55,7 +55,7 @@
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Tokyo Night Light",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#34548a",
     "editorBracketHighlight.foreground3": "#965027",
@@ -105,14 +105,6 @@
     {
       "before": ["m"],
       "commands": ["editor.action.commentLine", "extension.vim_escape"]
-    },
-    {
-      "before": ["leader", "o"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["leader", "p"],
-      "commands": ["workbench.action.showCommands"]
     }
   ],
   "vim.visualModeKeyBindings": [
