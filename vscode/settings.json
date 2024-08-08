@@ -6,46 +6,43 @@
 // - C/C++
 // - Modern Fortran
 // - Tokyo Night
+// - Gruvbox
 // - vscode-icons
 // - vscode-pdf
 // - indent rainbow
 
 {
+  "window.customTitleBarVisibility": "never",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "phase",
-  "editor.cursorStyle": "line",
   "editor.cursorSurroundingLines": 10,
   "editor.fontLigatures": true,
   "editor.fontWeight": 400,
   "editor.lightbulb.enabled": "off",
-  "editor.formatOnSave": true,
+  // "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.suggest.insertMode": "replace",
-  "editor.suggestFontSize": 13,
+  "editor.suggestFontSize": 12,
   "editor.wordWrap": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": false,
   "editor.renderWhitespace": "none",
   "editor.stickyScroll.enabled": false,
   "editor.renderControlCharacters": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabFocusMode": false,
   "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.horizontal": "auto",
   "editor.autoClosingComments": "always",
   "editor.guides.indentation": true,
   "editor.detectIndentation": true,
-  "editor.rulers": [72],
-  "editor.letterSpacing": 0.0,
+  "editor.rulers": [80],
   "editor.insertSpaces": true,
-  "editor.fontFamily": "'SF Mono', Consolas, 'Droid Sans Mono', 'Courier New', monospace",
-  "editor.glyphMargin": true,
-  "editor.hover.enabled": false,
-  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "'Nerd SF Mono', 'SF Mono'",
 
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
@@ -54,22 +51,58 @@
   "workbench.settings.editor": "json",
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.statusBar.visible": false,
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.colorCustomizations": {
+  "workbench.colorTheme": "Gruvbox Dark (Medium)",
+   "workbench.colorCustomizations": {
+    "[Tokyo Night Light]": {
+    "editor.selectionBackground":"#d2e1e4",
+    "statusBar.background":"#d5d6db",
+    "statusBar.border":"#d5d6db",
     "editorBracketHighlight.foreground1": "#34548a",
-    "editorBracketHighlight.foreground3": "#962796",
+    "editorBracketHighlight.foreground3": "#8e2489",
     "editorBracketHighlight.foreground2": "#789e51",
     "editorBracketHighlight.foreground4": "#7d66a5",
     "editorBracketHighlight.foreground5": "#e88a54",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
-  },
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.reduceMotion": "off",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    },
+    "[Gruvbox Dark (Medium)]": {
+    "editorBracketHighlight.foreground1": "#83A598",
+    "editorBracketHighlight.foreground2": "#789e51",
+    "editorBracketHighlight.foreground3": "#D3869B",
+    "editorBracketHighlight.foreground4": "#FABD2F",
+    "editorBracketHighlight.foreground5": "#8EC07C",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    "titleBar.activeBackground":"#282828",
+    "editor.background":"#282828",
+    "tab.activeBorder":"#83A598",
+    "statusBar.background":"#282828",
+    "terminal.background":"#282828",
+    "terminal.foreground":"#D5C4A1",
+    "terminalCursor.background":"#D5C4A1",
+    "terminalCursor.foreground":"#D5C4A1",
+    "terminal.ansiBlack":"#282828",
+    "terminal.ansiBlue":"#83A598",
+    "terminal.ansiBrightBlack":"#665C54",
+    "terminal.ansiBrightBlue":"#83A598",
+    "terminal.ansiBrightCyan":"#8EC07C",
+    "terminal.ansiBrightGreen":"#B8BB26",
+    "terminal.ansiBrightMagenta":"#D3869B",
+    "terminal.ansiBrightRed":"#FB4934",
+    "terminal.ansiBrightWhite":"#FBF1C7",
+    "terminal.ansiBrightYellow":"#FABD2F",
+    "terminal.ansiCyan":"#8EC07C",
+    "terminal.ansiGreen":"#B8BB26",
+    "terminal.ansiMagenta":"#D3869B",
+    "terminal.ansiRed":"#FB4934",
+    "terminal.ansiWhite":"#D5C4A1",
+    "terminal.ansiYellow":"#FABD2F"
+    },
+   },
 
+  "editor.scrollbar.horizontalScrollbarSize": 0,
+  "workbench.reduceMotion": "off",
   "window.commandCenter": false,
   "window.newWindowDimensions": "maximized",
   "window.restoreFullscreen": true,
@@ -85,9 +118,8 @@
   "vim.highlightedyank.color": "rgba(255,219,143,0.6)",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
-  "vim.hlsearch": false,
+  "vim.hlsearch": true ,
   "vim.useSystemClipboard": true,
-  "vim.leader": "space",
   "vim.normalModeKeyBindings": [
     {
       "before": ["j"],
@@ -108,6 +140,10 @@
     {
       "before": ["m"],
       "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -124,6 +160,7 @@
   ],
 
   "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": true,
   "zenMode.fullScreen": true,
   "zenMode.centerLayout": false,
 
@@ -141,44 +178,31 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.experimental.showMoves": true,
 
-  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorStyleInactive": "underline",
-  "terminal.integrated.allowChords": true,
+  "terminal.integrated.sendKeybindingsToShell": false,
 
+  "python.languageServer": "Pylance",
   "[python]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.autopep8",
+    // "editor.formatOnSave": true,
     "diffEditor.ignoreTrimWhitespace": true
   },
   "breadcrumbs.enabled": false,
   "telemetry.telemetryLevel": "off",
 
-  // TOKYO NIGHT LIGHT SETUP :
-  "indentRainbow.colors": [
-    "rgba(144, 224, 239,0.1)",
-    "rgba(72, 202, 228,0.1)",
-    "rgba(0, 180, 216,0.1)",
-    "rgba(0, 150, 199,0.1)",
-    "rgba(0, 119, 182, 0.1)",
-    "rgba(2, 62, 138,0.1)",
-    "rgba(3, 4, 94,0.1)",
-    "rgba(2, 62, 138,0.1)",
-    "rgba(0, 119, 182, 0.1)",
-    "rgba(0, 150, 199,0.1)",
-    "rgba(0, 180, 216,0.1)",
-    "rgba(72, 202, 228,0.1)",
-    "rgba(144, 224, 239,0.1)"
-  ],
-
-  "indentRainbow.errorColor": "rgba(144, 224, 239,0.1)",
   "remote.autoForwardPortsSource": "hybrid",
 
   "files.trimTrailingWhitespace": true,
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "window.menuBarVisibility": "hidden",
-  "terminal.integrated.sendKeybindingsToShell": false
+  "window.menuBarVisibility": "compact",
+  "pdf-preview.default.scale": "page-width",
+  "pdf-preview.default.cursor": "hand",
+  "workbench.editorAssociations": {
+    "*.pdf": "pdf.preview"
+  },
+  "warmUp.changeCount": "15",
+  "workbench.statusBar.visible": false,
 }

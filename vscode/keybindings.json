@@ -7,25 +7,21 @@
     //  "ctrl+h": Focuses on the left editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroup",
-    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   {
     // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+l",
     "command": "workbench.action.focusRightGroup",
-    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   {
     // "ctrl+k": Focuses on the editor group above the current one when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+k",
     "command": "workbench.action.focusAboveGroup",
-    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   {
     // "ctrl+j": Focuses on the editor group below the current one when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+j",
     "command": "workbench.action.focusBelowGroup",
-    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
 
   //
@@ -72,7 +68,6 @@
     "command": "workbench.files.action.focusFilesExplorer",
     "when": "editorTextFocus || terminalFocus"
   },
-
   //
   // FILE EXPLORER NAVIGATION SHORTCUTS
   //
@@ -93,21 +88,18 @@
   //
   // TERMINAL SHORTCUTS
   //
+
   {
-    // Focus the terminal when the terminal is not focused
+    "command": "runCommands",
     "key": "ctrl+[Comma]",
-    "command": "workbench.action.terminal.focus"
+    "args": {
+      "commands": [
+        "workbench.action.toggleStatusbarVisibility",
+        "workbench.action.togglePanel"
+      ]
+    }
   },
-  {
-    // Focus the active editor group (text editor) when the terminal is focused
-    "key": "ctrl+[Comma]",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+[Comma]",
-    "command": "workbench.action.togglePanel"
-  },
+
   {
     "key": "ctrl+[Comma]",
     "command": "-editor.action.quickFix",
@@ -324,5 +316,15 @@
     "key": "shift+pageup",
     "command": "-workbench.action.terminal.scrollUpPage",
     "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
-  }
+  },
+  {
+    "key": "capslock",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+},
+{
+    "key": "escape",
+    "command": "-extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+}
 ]

@@ -24,7 +24,7 @@ filetype indent on
 " Turn syntax highlighting on.
 syntax on
 
-highlight LineNr ctermfg=311
+highlight LineNr ctermfg=000
 
 " Add numbers to the file.
 set number
@@ -115,7 +115,10 @@ set statusline+=\ %F\ %M\ %Y\ %R
 set statusline+=%=
 
 " Status line right side.
-"set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " Show the status on the second to last line.
 set laststatus=2
+
+set fillchars+=vert:\ 
+hi VertSplit ctermbg=000
