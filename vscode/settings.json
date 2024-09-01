@@ -185,6 +185,11 @@
   "terminal.integrated.cursorStyleInactive": "underline",
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.fontFamily": "'Liga SFMono Nerd Font', 'SF Mono Nerd', 'SF Mono', Consolas",
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.files.action.focusFilesExplorer",
+    "workbench.action.toggleSidebarVisibility",
+  ],
+
 
   "python.languageServer": "Pylance",
   "[python]": {
@@ -203,32 +208,8 @@
   "workbench.editorAssociations": {
     "*.pdf": "pdf.preview"
   },
-  "workbench.colorTheme": "Tokyo Night Light",
+  "workbench.colorTheme": "Gruvbox Dark (Medium)",
   "glassit.alpha": 255,
   "workbench.sideBar.location": "right",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "Ubuntu (WSL)": {
-      "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "-d",
-        "Ubuntu"
-      ]
-    }
-  },
   "workbench.statusBar.visible": false,
 }
