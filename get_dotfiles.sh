@@ -4,4 +4,5 @@ cp ~/.bash_aliases ./bash/
 cp ~/.bashrc ./bash/
 cp ~/.inputrc ./bash/
 cp ~/.vimrc ./vim/
+cp -r ~/.vim_runtime/ ./vim/
 git commit -a

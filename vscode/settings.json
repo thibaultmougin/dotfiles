@@ -16,8 +16,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "phase",
   "editor.cursorSurroundingLines": 10,
-  "editor.fontLigatures": true,
-  "editor.fontWeight": 400,
+  "editor.fontLigatures": false,
+  "editor.fontWeight": 500,
   "editor.lightbulb.enabled": "off",
   // "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -42,7 +42,7 @@
   "editor.detectIndentation": true,
   "editor.rulers": [80],
   "editor.insertSpaces": true,
-  "editor.fontFamily": "'Nerd SF Mono', 'SF Mono'",
+  "editor.fontFamily":"'Liga SFMono Nerd Font', 'SF Mono Nerd', 'SF Mono'",
 
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
@@ -54,7 +54,6 @@
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Gruvbox Dark (Medium)",
    "workbench.colorCustomizations": {
     "[Tokyo Night Light]": {
     "editor.selectionBackground":"#d2e1e4",
@@ -106,7 +105,7 @@
   "window.commandCenter": false,
   "window.newWindowDimensions": "maximized",
   "window.restoreFullscreen": true,
-  "window.zoomLevel": 0.75,
+  "window.zoomLevel": 1,
   "window.titleBarStyle": "custom",
 
   "explorer.confirmDelete": false,
@@ -185,6 +184,7 @@
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorStyleInactive": "underline",
   "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.fontFamily": "'Liga SFMono Nerd Font', 'SF Mono Nerd', 'SF Mono', Consolas",
 
   "python.languageServer": "Pylance",
   "[python]": {
@@ -203,6 +203,31 @@
   "workbench.editorAssociations": {
     "*.pdf": "pdf.preview"
   },
-  "warmUp.changeCount": "15",
-  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Tokyo Night Light",
+  "glassit.alpha": 255,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
 }

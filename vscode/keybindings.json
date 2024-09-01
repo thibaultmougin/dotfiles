@@ -6,12 +6,25 @@
   {
     //  "ctrl+h": Focuses on the left editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+h",
-    "command": "workbench.action.focusLeftGroup",
+    "command": "workbench.action.focusLeftGroupWithoutWrap",
+    "when": "!explorerViewletFocus"
   },
   {
     // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+l",
-    "command": "workbench.action.focusRightGroup",
+    "command": "workbench.action.focusRightGroupWithoutWrap",
+  },
+  {
+    // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
+    "key": "ctrl+l",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "explorerViewletVisible && (activeEditorGroupLast||terminalFocus)"
+  },
+  {
+    // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLastEditorGroup",
+    "when": "explorerViewletFocus"
   },
   {
     // "ctrl+k": Focuses on the editor group above the current one when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
@@ -39,6 +52,10 @@
     "when": "inQuickOpen"
   },
 
+  {
+    "key": "alt+p",
+    "command": "workbench.action.switchWindow",
+  },
   //
   // EDITOR AND FILES SWITCHING NAVIGATION SHORTCUTS
   //
@@ -61,12 +78,6 @@
     // ", e": Toggles the sidebar's visibility when the text editor is not focused. <leader> + e
     "key": "ctrl+e",
     "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    // Focus on File Explorer when text editor is focused
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "editorTextFocus || terminalFocus"
   },
   //
   // FILE EXPLORER NAVIGATION SHORTCUTS
@@ -99,6 +110,7 @@
       ]
     }
   },
+
 
   {
     "key": "ctrl+[Comma]",
@@ -318,13 +330,18 @@
     "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
   },
   {
-    "key": "capslock",
-    "command": "extension.vim_escape",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-},
-{
-    "key": "escape",
-    "command": "-extension.vim_escape",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-}
+    "key": "alt+p",
+    "command": "-toggleSearchPreserveCase",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "alt+p",
+    "command": "-togglePreserveCase",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+p",
+    "command": "-keybindings.editor.toggleSortByPrecedence",
+    "when": "inKeybindings"
+  },
 ]
