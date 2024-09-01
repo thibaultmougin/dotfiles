@@ -56,7 +56,7 @@
   "workbench.editor.enablePreview": false,
    "workbench.colorCustomizations": {
     "[Tokyo Night Light]": {
-    "editor.selectionBackground":"#d2e1e4",
+    "editor.selectionBackground":"#bee8f0",
     "statusBar.background":"#d5d6db",
     "statusBar.border":"#d5d6db",
     "editorBracketHighlight.foreground1": "#34548a",
@@ -230,4 +230,5 @@
       ]
     }
   },
+  "workbench.statusBar.visible": false,
 }
