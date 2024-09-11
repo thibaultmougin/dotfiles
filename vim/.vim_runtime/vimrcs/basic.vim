@@ -226,7 +226,7 @@ map <leader>t<leader> :tabnext<cr>
 
 map <leader>v :vsplit<cr>
 
-hi VertSplit cterm=NONE
+highlight VertSplit cterm=NONE
 
 let NERDTreeShowHidden=1
 

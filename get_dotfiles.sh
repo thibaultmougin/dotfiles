@@ -5,4 +5,5 @@ cp ~/.bashrc ./bash/
 cp ~/.inputrc ./bash/
 cp ~/.vimrc ./vim/
 cp -r ~/.vim_runtime/ ./vim/
+cp ~/.tmux.conf ./tmux/
 git commit -a
