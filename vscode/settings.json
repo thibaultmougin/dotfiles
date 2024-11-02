@@ -17,7 +17,7 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorSurroundingLines": 10,
   "editor.fontLigatures": false,
-  "editor.fontWeight": 500,
+  "editor.fontWeight": 550,
   "editor.lightbulb.enabled": "off",
   // "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -51,7 +51,6 @@
   "workbench.settings.editor": "json",
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
    "workbench.colorCustomizations": {
@@ -202,14 +201,15 @@
 
   "remote.autoForwardPortsSource": "hybrid",
 
-  "files.trimTrailingWhitespace": true,
-  "window.menuBarVisibility": "compact",
   "pdf-preview.default.scale": "page-width",
   "pdf-preview.default.cursor": "hand",
   "workbench.editorAssociations": {
     "*.pdf": "pdf.preview"
   },
   "workbench.sideBar.location": "right",
-  "glassit.alpha": 255,
   "workbench.colorTheme": "Gruvbox Dark (Medium)",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "hidden",
+  "window.menuBarVisibility": "compact",
+  "warmUp.changeCount": "15",
 }

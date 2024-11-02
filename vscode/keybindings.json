@@ -7,7 +7,12 @@
     //  "ctrl+h": Focuses on the left editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
     "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroupWithoutWrap",
-    "when": "!explorerViewletFocus"
+  },
+  {
+    // "ctrl+h":
+    "key": "ctrl+h",
+    "command": "workbench.view.search.focus",
+    "when": "searchViewletVisible && (activeEditorGroupIndex==1||terminalFocus)"
   },
   {
     // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
@@ -25,6 +30,12 @@
     "key": "ctrl+h",
     "command": "workbench.action.focusLastEditorGroup",
     "when": "explorerViewletFocus"
+  },
+  {
+    // "ctrl+l": Focuses on the right editor group when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
+    "key": "ctrl+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "searchViewletFocus"
   },
   {
     // "ctrl+k": Focuses on the editor group above the current one when the text editor is focused, Vim extension is active, and Vim is not in Insert mode.
@@ -51,28 +62,6 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
-
-  {
-    "key": "alt+p",
-    "command": "workbench.action.switchWindow",
-  },
-  //
-  // EDITOR AND FILES SWITCHING NAVIGATION SHORTCUTS
-  //
-  // To switch between open files within an editor group, use the following shortcuts:
-  // ctrl+tab: Go to the next file in the group.
-  // ctrl+shift+tab: Go to the previous file in the group.
-  // To switch focus between editor groups, use the following shortcuts:
-  // ctrl+1: Focus on the first (left) editor group.
-  // ctrl+2: Focus on the second (right) editor group.
-  // With these shortcuts, you can easily navigate between open files in side-by-side text editor windows.
-  // For example, to switch from a file in the left editor group to a file in the right editor group, press ctrl+2,
-  // and then use ctrl+tab or ctrl+shift+tab to navigate between files in the right editor group.
-  // To switch back to the left editor group, press ctrl+1.
-
-  //
-  // FILE EXPLORER SHORTCUTS
-  //
 
   {
     // ", e": Toggles the sidebar's visibility when the text editor is not focused. <leader> + e
@@ -105,7 +94,7 @@
     "key": "ctrl+[Comma]",
     "args": {
       "commands": [
-        "workbench.action.toggleStatusbarVisibility",
+        // "workbench.action.toggleStatusbarVisibility",
         "workbench.action.togglePanel"
       ]
     }
@@ -343,5 +332,142 @@
     "key": "alt+p",
     "command": "-keybindings.editor.toggleSortByPrecedence",
     "when": "inKeybindings"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-notebook.find",
+    "when": "notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.interactive' || notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.notebook'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-settings.action.search",
+    "when": "inSettingsEditor"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-extension.vim_ctrl+f",
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-commentsFocusFilter",
+    "when": "focusedView == 'workbench.panel.comments'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-editor.action.extensioneditor.showfind",
+    "when": "!editorFocus && activeEditor == 'workbench.editor.extension'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-editor.action.webvieweditor.showFind",
+    "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-keybindings.editor.searchKeybindings",
+    "when": "inKeybindings"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-problems.action.focusFilter",
+    "when": "focusedView == 'workbench.panel.markers.view'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-repl.action.filter",
+    "when": "inDebugRepl && textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "-workbench.view.search",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleSearchEditorCaseSensitive",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleSearchCaseSensitive",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-references-view.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "workbench.view.search",
+  },
+  {
+    "key": "ctrl+f",
+    "command": "keybindings.editor.clearSearchResults",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "escape",
+    "command": "-keybindings.editor.clearSearchResults",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "-warmUp.start"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickTextSearch"
   },
 ]
