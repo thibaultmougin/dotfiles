@@ -44,7 +44,7 @@
   "editor.insertSpaces": true,
   "editor.fontFamily":"'Liga SFMono Nerd Font', 'SF Mono Nerd', 'SF Mono'",
 
-  "workbench.startupEditor": "none",
+  "workbench.startupEditor": "welcomePage",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
   "workbench.layoutControl.enabled": false,
@@ -118,6 +118,7 @@
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true ,
+  "vim.replaceWithRegister": true ,
   "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
     {
@@ -143,12 +144,20 @@
     {
       "before": ["Y"],
       "after": ["y", "$"]
-    }
+    },
+    {
+      "before": ["t"],
+      "after": ["y", "i", "w", "k", "/", "<C-R>", "0", "<CR>"]
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["m"],
       "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    },
+    {
+      "before": ["z"],
+      "commands": ["git.revertSelectedRanges"]
     }
   ],
   "vim.insertModeKeyBindings": [
@@ -177,6 +186,7 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.experimental.showMoves": true,
 
+  "terminal.integrated.scrollback":10000,
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.stickyScroll.enabled": false,
@@ -196,7 +206,6 @@
     // "editor.formatOnSave": true,
     "diffEditor.ignoreTrimWhitespace": true
   },
-  "breadcrumbs.enabled": false,
   "telemetry.telemetryLevel": "off",
 
   "remote.autoForwardPortsSource": "hybrid",
@@ -207,9 +216,12 @@
     "*.pdf": "pdf.preview"
   },
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Gruvbox Dark (Medium)",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.location": "hidden",
+  "editor.glyphMargin": true,
+  "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "compact",
-  "warmUp.changeCount": "15",
+
+
 }

@@ -400,16 +400,6 @@
   },
   {
     "key": "alt+c",
-    "command": "toggleSearchEditorContextLines",
-    "when": "inSearchEditor"
-  },
-  {
-    "key": "alt+l",
-    "command": "-toggleSearchEditorContextLines",
-    "when": "inSearchEditor"
-  },
-  {
-    "key": "alt+c",
     "command": "-workbench.action.terminal.toggleFindCaseSensitive",
     "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
   },
@@ -470,4 +460,29 @@
     "key": "alt+p",
     "command": "workbench.action.quickTextSearch"
   },
+  {
+    "key": "alt+c",
+    "command": "toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+v",
+    "command": "increaseSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+oem_plus",
+    "command": "-increaseSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-extension.vim_ctrl+t",
+    "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+  }
 ]
