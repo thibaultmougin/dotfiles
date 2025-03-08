@@ -8,5 +8,3 @@ alias gk="gitk --all &"
 alias ll="ls -halF"
 
 alias hi='history | tail -20'
-
-alias code_saturne="$cspath/code_saturne"
