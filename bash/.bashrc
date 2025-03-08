@@ -4,6 +4,7 @@
 
 export VISUAL="/usr/bin/vim"
 export EDITOR="$VISUAL"
+export MANPAGER="vim -M +MANPAGER --not-a-term -"
 
 # If not running interactively, don't do anything
 case $- in
@@ -60,11 +61,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PROMPT_DIRTRIM=3
+PROMPT_DIRTRIM=2
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[91;1m\]$(__git_ps1 " %s")\[\e[00m\] '
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[91;1m\]$(__git_ps1 " %s")\[\e[00m\] '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\034[91;1m\]$(__git_ps1 " %s")\[\e[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -111,4 +112,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
