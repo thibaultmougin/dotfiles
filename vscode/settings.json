@@ -146,9 +146,9 @@
       "after": ["y", "$"]
     },
     {
-      "before": ["t"],
+      "before": ["ù"],
       "after": ["y", "i", "w", "k", "/", "<C-R>", "0", "<CR>"]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
